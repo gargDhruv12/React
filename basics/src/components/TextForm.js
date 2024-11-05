@@ -28,14 +28,14 @@ export default function TextForm(props) {
               color : props.mode==="dark" ? "white" : "#0c1f31"
             }}></textarea>
         </div>
-        <button className='btn btn-primary mx-1' onClick={handleUpClick}>Convert to uppercase</button>
-        <button className='btn btn-primary mx-1' onClick={handleLoClick}>Convert to lowercase</button>
+        <button className='btn btn-primary mx-1 my-1' onClick={handleUpClick}>Convert to uppercase</button>
+        <button className='btn btn-primary mx-1 my-1' onClick={handleLoClick}>Convert to lowercase</button>
         
     </div>
     <div className='container my-3' style={{color : props.mode==="dark" ? "white" : "#0c1f31" }}>
         <h2>Text Summary</h2>
-        <p>total {text.split(" ").length} words , {text.length} characters</p>
-        <p>Readable in {0.008 * text.split(" ").length} minutes </p>
+        <p>total {text.split(" ").filter((element)=>{return element.length!==0}).length} words , {text.length} characters</p>
+        <p>Readable in {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes </p>
     </div>
     </>
   )

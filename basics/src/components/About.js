@@ -5,25 +5,25 @@ export default function About() {
         color : "black",
         backgroundColor : "white"
     })
-    const [btnText,setBtnText] = useState("Enable dark mode")
+    // const [btnText,setBtnText] = useState("Enable dark mode")
 
-    const toggleMode = ()=>{
-        if(myStyle.color === "black"){
-            setMyStyle({
-                color : "white",
-                backgroundColor : "black",
-                border : "1px solid white"
-            });
-            setBtnText("Enable light mode");
-        }
-        else{
-            setMyStyle({
-                color : "black",
-                backgroundColor : "white"
-            });
-            setBtnText("Enable dark mode");
-        }
-    }
+    // const toggleMode = ()=>{
+    //     if(myStyle.color === "black"){
+    //         setMyStyle({
+    //             color : "white",
+    //             backgroundColor : "black",
+    //             border : "1px solid white"
+    //         });
+    //         setBtnText("Enable light mode");
+    //     }
+    //     else{
+    //         setMyStyle({
+    //             color : "black",
+    //             backgroundColor : "white"
+    //         });
+    //         setBtnText("Enable dark mode");
+    //     }
+    // }
   return (
     <div className='container my-3' style={myStyle}>
                 <h1 className='my-3' > About us</h1>
@@ -65,9 +65,9 @@ export default function About() {
             </div>
         </div>
         </div>
-        <div className='container my-2'>
+        {/* <div className='container my-2'>
             <button type="button" className="btn btn-warning" onClick={toggleMode}>{btnText}</button>
-        </div>
+        </div> */}
     </div>
   )
 }

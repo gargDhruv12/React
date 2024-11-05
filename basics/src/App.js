@@ -63,9 +63,15 @@ function App() {
         <Routes>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/" element={<TextForm heading="Enter text here to analyze" mode={mode} showAlert={showAlert} />} />
-        </Routes> {/* exact keyword will help as react reads partially path and then do work */}
+        </Routes> {/* exact keyword will help as react reads partially path and then do work */} 
       </div>
-    </Router>
+    </Router> 
+
+    {/* <Navbar title="TextUtils" AboutText="About us" mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} />
+      <div className='container my-3'>
+        <TextForm heading="Enter text here to analyze" mode={mode} showAlert={showAlert} />
+      </div> */}
   </>
 );
 }

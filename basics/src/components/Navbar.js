@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'            // note : we use lint & to in place of a & href
 
 export default function Navbar(props) {
   return (
