@@ -34,8 +34,8 @@ export default function TextForm(props) {
     </div>
     <div className='container my-3' style={{color : props.mode==="dark" ? "white" : "#0c1f31" }}>
         <h2>Text Summary</h2>
-        <p>total {text.split(" ").filter((element)=>{return element.length!==0}).length} words , {text.length} characters</p>
-        <p>Readable in {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes </p>
+        <p>total {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words , {text.length} characters</p>
+        <p>Readable in {0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length} minutes </p>
     </div>
     </>
   )
