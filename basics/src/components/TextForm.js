@@ -24,12 +24,12 @@ export default function TextForm(props) {
         <h1>{props.heading}</h1>
         <div className="mb-3">
             <textarea className="form-control" value={text} onChange={handleOnchange} id="mybox" rows="5" style={{
-              backgroundColor : props.mode==="dark" ? "grey" : "white",
+              backgroundColor : props.mode==="dark" ? "#276c85" : "white",
               color : props.mode==="dark" ? "white" : "#0c1f31"
             }}></textarea>
         </div>
-        <button className='btn btn-primary mx-1 my-1' onClick={handleUpClick}>Convert to uppercase</button>
-        <button className='btn btn-primary mx-1 my-1' onClick={handleLoClick}>Convert to lowercase</button>
+        <button className='btn btn-primary mx-1 my-1' disabled={text.length === 0}  onClick={handleUpClick}>Convert to uppercase</button>
+        <button className='btn btn-primary mx-1 my-1' disabled={text.length === 0}  onClick={handleLoClick}>Convert to lowercase</button>
         
     </div>
     <div className='container my-3' style={{color : props.mode==="dark" ? "white" : "#0c1f31" }}>

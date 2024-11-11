@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 
-export default function About() {
-    const [myStyle,setMyStyle] = useState({
-        color : "black",
-        backgroundColor : "white"
-    })
+export default function About(props) {
+    // const [myStyle,setMyStyle] = useState({
+    //     color : "black",
+    //     backgroundColor : "white"
+    // })
     // const [btnText,setBtnText] = useState("Enable dark mode")
 
     // const toggleMode = ()=>{
@@ -23,10 +23,15 @@ export default function About() {
     //         });
     //         setBtnText("Enable dark mode");
     //     }
-    // }
+    // }  Now we have disabled Enable dark mode button which was separate for About section
+
+    let myStyle = {
+        color : props.mode === "dark" ? "white" : "black",
+        backgroundColor : props.mode === "dark" ? "#3272a5"  : "white",
+    }
   return (
-    <div className='container my-3' style={myStyle}>
-                <h1 className='my-3' > About us</h1>
+    <div className='container my-3' >
+                <h1 className='my-3' style={{color : props.mode === "dark" ? "white" : "black"}} > About us</h1>
             <div className="accordion" id="accordionExample">
         <div className="accordion-item">
             <h2 className="accordion-header">
